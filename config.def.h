@@ -66,9 +66,6 @@ static const char *termcmd[]  = { "st", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	
-	{ 0,              XF86XK_AudioLowerVolume, spawn, 	   {.v = downvol } },
-	{ 0,              XF86XK_AudioMute,        spawn, 	   {.v = mutevol } },
-	{ 0,              XF86XK_AudioRaiseVolume, spawn, 	   {.v = upvol   } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
@@ -102,7 +99,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-};
+	{ 0,              XF86XK_AudioLowerVolume, spawn, 	   {.v = downvol } },
+	{ 0,              XF86XK_AudioMute,        spawn, 	   {.v = mutevol } },
+	{ 0,              XF86XK_AudioRaiseVolume, spawn, 	   {.v = upvol   } },
+};	
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
